@@ -1,0 +1,21 @@
+image: repo.adeo.no:5443/ai-lab-flask-react-starter
+team: ailab
+port: 80
+healthcheck: #Optional
+  readiness:
+    path: isready
+    initialDelay: 300
+    timeout: 1
+resources: # Optional. See: http://kubernetes.io/docs/user-guide/compute-resources/
+  limits:
+    cpu: 500m # app will have its cpu usage throttled if exceeding this limit
+    memory: 2256Mi  # app will be killed if exceeding these limits
+  requests: # App is guaranteed the requested resources and  will be scheduled on nodes with at least this amount of resources available
+    cpu: 500m
+    memory: 2256Mi
+ingress:
+  enabled: true
+replicas: # set min = max to disable autoscaling
+  min: 1 # minimum number of replicas
+  max: 1 # maximum number of replicas
+secrets: true

@@ -1,0 +1,7 @@
+.gitignore
+Dockerfile
+CODEOWNERS
+LICENSE.md
+README.md
+notebooks
+scripts/buildReactApp.sh
