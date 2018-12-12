@@ -4,7 +4,7 @@ import os
 from flask import Flask, render_template, request
 from flask_cors import CORS
 from fastText import load_model
-from app.S3.s3_connector import AWSS3Connector
+from S3.s3_connector import AWSS3Connector
 
 
 STATIC_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')

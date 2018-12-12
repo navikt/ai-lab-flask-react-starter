@@ -33,3 +33,6 @@ yarn-error.log*
 data/
 **/model.bin
 
+ca-bundle.crt
+package-lock.json
+

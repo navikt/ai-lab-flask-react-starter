@@ -8,7 +8,7 @@ class AWSS3Connector:
     """Amazon S3 Storage compatible connection"""
 
     # Init
-    def __init__(self, bucket_name: str, encrypted=True):
+    def __init__(self, bucket_name: str):
         host = open(os.getenv('VKS_SECRET_DEST_PATH') + '/S3_HOST', 'r').read()
         access_key = open(os.getenv('VKS_SECRET_DEST_PATH') + '/S3_ACCESS_KEY', 'r').read()
         secret_key = open(os.getenv('VKS_SECRET_DEST_PATH') + '/S3_SECRET_KEY', 'r').read()
