@@ -3,9 +3,7 @@ team: ailab
 port: 80
 healthcheck:
   readiness:
-    path: isready
-    initialDelay: 50
-    timeout: 1
+    initialDelay: 90
 resources:
   limits:
     cpu: 500m # app will have its cpu usage throttled if exceeding this limit
