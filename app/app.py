@@ -72,5 +72,5 @@ def api():
 if __name__ == '__main__':
     download_fasttext_model()
     load_fasttext_model()
-    app.run(host='0.0.0.0', port=5400, debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
 
