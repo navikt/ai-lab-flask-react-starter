@@ -20,7 +20,11 @@ node {
         }
 
         stage('Checkout code') {
-            checkout scm
+            checkout(
+                scm: [$class: 'GitSCM',
+                    branches: [[name: '*/master']],
+                    userRemoteConfigs: [[url: "git@github.com:navikt/ai-lab-flask-react-starter.git", credentialsId: 'ci-flask-react-starter']]]
+            )
             def git_commit_hash = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
             version_tag = "${datestring}-${git_commit_hash}"
         }
